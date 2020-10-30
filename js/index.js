@@ -11,6 +11,10 @@ const div1 = document.querySelector('.destination:nth-of-type(1)');
 const div2 = document.querySelector('.destination:nth-of-type(2)');
 const div3 = document.querySelector('.destination:nth-of-type(3)');
 const section = document.querySelector('.content-pick');
+const a1 = document.querySelector('nav a:nth-of-type(1)');
+const a2 = document.querySelector('nav a:nth-of-type(2)');
+const a3 = document.querySelector('nav a:nth-of-type(3)');
+const a4 = document.querySelector('nav a:nth-of-type(4)');
 
 // 1 - mouseover
 nav.addEventListener('mouseover', e => {
@@ -114,4 +118,21 @@ window.addEventListener('beforeprint', e => {
 // stop propagation - see section 9 above
 section.addEventListener('copy', e => {
     e.target.style.backgroundColor = 'blue';
+})
+
+// preventDefault
+a1.addEventListener('click', e => {
+    e.preventDefault();
+})
+
+a2.addEventListener('click', e => {
+    e.preventDefault();
+})
+
+a3.addEventListener('click', e => {
+    e.preventDefault();
+})
+
+a4.addEventListener('click', e => {
+    e.preventDefault();
 })
