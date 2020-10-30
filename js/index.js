@@ -10,6 +10,7 @@ const boatImg = document.querySelector('.content-destination img');
 const div1 = document.querySelector('.destination:nth-of-type(1)');
 const div2 = document.querySelector('.destination:nth-of-type(2)');
 const div3 = document.querySelector('.destination:nth-of-type(3)');
+const section = document.querySelector('.content-pick');
 
 // 1 - mouseover
 nav.addEventListener('mouseover', e => {
@@ -92,17 +93,25 @@ boatImg.addEventListener('dblclick', e => {
 // 9 copy
 div1.addEventListener('copy', e => {
     e.target.style.backgroundColor = 'yellow';
+    e.stopPropagation();
 })
 
 div2.addEventListener('copy', e => {
     e.target.style.backgroundColor = 'yellow';
+    e.stopPropagation();
 })
 
 div3.addEventListener('copy', e => {
     e.target.style.backgroundColor = 'yellow';
+    e.stopPropagation();
 })
 
 // 10 - beforeprint
 window.addEventListener('beforeprint', e => {
     alert('Why would you want to print this?  For real, it\'s just a bus!  It\'s not even real!  It\'s a toy!  Why?');
+})
+
+// stop propagation - see section 9 above
+section.addEventListener('copy', e => {
+    e.target.style.backgroundColor = 'blue';
 })
